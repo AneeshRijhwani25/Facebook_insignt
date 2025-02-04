@@ -1,0 +1,9 @@
+Flask
+pymongo
+beautifulsoup4
+requests
+python-dotenv
+redis
+flask_caching
+celery
+boto3
