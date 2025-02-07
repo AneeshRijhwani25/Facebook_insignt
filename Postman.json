@@ -1,0 +1,111 @@
+{
+    "info": {
+      "name": "Facebook Insights Microservice",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Fetch Page Details",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/api/page/:username",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "page", ":username"],
+            "variable": [
+              {
+                "key": "username",
+                "value": "boat.lifestyle",
+                "description": "Facebook page username (e.g., boat.lifestyle)"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "List Pages",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/api/pages?follower_range=20000-40000&category=Business&page=1&limit=10",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "pages"],
+            "query": [
+              {
+                "key": "follower_range",
+                "value": "20000-40000",
+                "description": "Filter pages by follower count range"
+              },
+              {
+                "key": "category",
+                "value": "Business",
+                "description": "Filter pages by category"
+              },
+              {
+                "key": "page",
+                "value": "1",
+                "description": "Pagination page number"
+              },
+              {
+                "key": "limit",
+                "value": "10",
+                "description": "Number of results per page"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Recent Posts",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/api/posts/:username",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "posts", ":username"],
+            "variable": [
+              {
+                "key": "username",
+                "value": "boat.lifestyle",
+                "description": "Facebook page username (e.g., boat.lifestyle)"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Generate AI Summary",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/api/summary/:username",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "summary", ":username"],
+            "variable": [
+              {
+                "key": "username",
+                "value": "boat.lifestyle",
+                "description": "Facebook page username (e.g., boat.lifestyle)"
+              }
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
